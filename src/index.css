@@ -1,12 +1,8 @@
 body {
   margin: 0;
   font-family:'Courier New', Courier, monospace;
-  background-color: #736EFE;
+  background-color: #191970 !important;
 }
 button {
   cursor: pointer;
-}
-.tank {
-  background: linear-gradient(135deg, rgba(73,155,234,1) 0%, rgba(240,45,31,1) 100%);
-
 }

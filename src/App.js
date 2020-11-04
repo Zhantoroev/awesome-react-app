@@ -7,6 +7,7 @@ import Signin from './components/Signin/Signin';
 import Register from './components/Register/Register';
 import Logo from './components/Logo/Logo';
 import ImageLinkForm from './components/ImageLinkForm/ImageLinkForm';
+import { Button, Modal } from 'react-bootstrap'
 import './App.css';
 import 'tachyons';
 
@@ -15,16 +16,39 @@ const app = new Clarifai.App({
 });
 
 const particlesOptions = {
-  particles: {
-    number: {
-      value: 50,
-      density: {
-        enable: true,
-        value_area: 400
-      }
+  "particles": {
+    "number": {
+        "value": 160,
+        "density": {
+            "enable": false
+        }
+    },
+    "size": {
+        "value": 10,
+        "random": true
+    },
+    "move": {
+        "direction": "bottom",
+        "out_mode": "out"
+    },
+    "line_linked": {
+        "enable": false
     }
-  }
+},
+"interactivity": {
+    "events": {
+        "onclick": {
+            "enable": true,
+            "mode": "remove"
+        }
+    },
+    "modes": {
+        "remove": {
+            "particles_nb": 10
+        }
+    }
 }
+    }
 
 class App extends Component {
   constructor() {
@@ -34,7 +58,8 @@ class App extends Component {
       imageUrl: '',
       box: {},
       route: 'signin',
-      isSignedIn: false
+      isSignedIn: false,
+      show: false
     }
   }
 
@@ -78,6 +103,10 @@ class App extends Component {
     }
     this.setState({route: route});
   }
+  
+  handleModal() {
+    this.setState({show:!this.state.show});
+  }
 
   render() {
     const {isSignedIn, imageUrl, route, box} = this.state;
@@ -95,6 +124,21 @@ class App extends Component {
                 onButtonSubmit={this.onButtonSubmit}
               />
               <FaceRecognition box={box} imageUrl={imageUrl} />
+              <div>
+                  <Button className="mt2" onClick={() =>{this.handleModal()}}>About Me</Button>
+                  <Modal show={this.state.show} onHide={() =>this.handleModal()} >
+                    <Modal.Header>About Me</Modal.Header>
+                    <Modal.Body>
+                    <p>Hi, my name is Syimyk Zhantoroev.<br></br>
+                    I'm the Web Developer and student at AIU.</p>
+                    </Modal.Body>
+                    <Modal.Footer>
+                      <Button onClick={() =>{this.handleModal()}}>
+                        Close
+                      </Button>
+                    </Modal.Footer>
+                  </Modal>
+                </div>
             </div>
           : (
             route === 'signin'
