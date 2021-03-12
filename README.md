@@ -1,8 +1,8 @@
 # PERN project for CS 204
 * This is a quiz application with user authentification
 
-<img src="https://github.com/Zhantoroev/pern-peaceful-retreat/blob/main/public/img1.png" width="49%" /> <img src="https://github.com/Zhantoroev/pern-peaceful-retreat/blob/main/public/img2.png" width="49%" />
-<img src="https://github.com/Zhantoroev/pern-peaceful-retreat/blob/main/public/img3.png" width="49%" />
+<img src="https://github.com/Zhantoroev/awesome-react-app/blob/main/public/img1.png" width="49%" /> <img src="https://github.com/Zhantoroev/awesome-react-app/blob/main/public/img2.png" width="49%" />
+<img src="https://github.com/Zhantoroev/awesome-react-app/blob/main/public/img3.png" width="100%" />
 
 ## API Description
 * To view all users data from database `/all`  HTTP Method: Get
@@ -27,7 +27,6 @@
 2. Run `npm install`
 3. Run `npm start`
 
-[Link](https://github.com/Zhantoroev/pern-peaceful-retreat-api) to Back-end code
+[Link](https://github.com/Zhantoroev/awesome-api) to Back-end code
 [Server](https://peaceful-retreat-54716.herokuapp.com/)
-[Live](https://zhantoroev.github.io/pern-peaceful-retreat/) on GitHub Pages
 [Live](https://awesome-react-app.herokuapp.com/) on Heroku
