@@ -1,11 +1,11 @@
-import React, { Component }  from 'react';
+import React, { Component}  from 'react';
 import CardList from './CardList';
 import SearchBox from './SearchBox';
 import ErrorBoundry from './ErrorBoundry';
 import './All.css';
 
 class All extends Component {
-  constructor() {
+  constructor(props) {
     super();
     this.state = {
       robots: [],
@@ -35,7 +35,7 @@ class All extends Component {
           alt='robofriends' src={`https://see.fontimg.com/api/renderfont4/7Bpow/eyJyIjoiZnMiLCJoIjo2NSwidyI6MTAwMCwiZnMiOjY1LCJmZ2MiOiIjRkZGRkZGIiwiYmdjIjoiI0ZGRkZGRiIsInQiOjF9/U2VhcmNoaW5n/broadway-regular.png`}/>
         <SearchBox onSearchChange={this.onSearchChange}/>
           <ErrorBoundry>
-            <CardList robots={newRobots}/>
+            <CardList robots={newRobots} onRouteChange={this.props.onRouteChange} onSingleUser={this.props.onSingleUser}/>
           </ErrorBoundry>
       </div>
     </div>

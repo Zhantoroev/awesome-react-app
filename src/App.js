@@ -6,6 +6,7 @@ import Register from './components/Register/Register';
 import Profile from './components/Profile/Profile';
 import All from './components/Allusers/All';
 import Quiz from './components/Quiz/QuizMain';
+import SingleUser from './components/singleUser/SingleUser'
 import './App.css';
 import 'tachyons';
 
@@ -34,13 +35,14 @@ const initialState = {
   box: {},
   route: 'signin',
   isSignedIn: false,
+  singleUserId: '',
   user: {
     id: '',
     name: '',
     email: '',
     password: '',
     entries: 0,
-    joined: '',
+    joined: ''
   }
 }
 
@@ -81,6 +83,9 @@ class App extends Component {
   onQuizFinish = (score) => {
     this.setState(Object.assign(this.state.user, { entries: score}))
   }
+  onSingleUser = (num) => {
+    this.setState({singleUserId: num})
+  }
 
   render() {
     const {isSignedIn, route} = this.state;
@@ -88,16 +93,17 @@ class App extends Component {
       <div className="App">
         <Particles className = 'particles'
         params={particlesOptions}/>
-
         <Navigation isSignedIn={isSignedIn} onRouteChange={this.onRouteChange} route={route}/>
         
         {route === 'main'
-        ? <All route={route}/>
+        ? <All route={route} onRouteChange={this.onRouteChange} onSingleUser={this.onSingleUser}/>
         : route === 'playQuiz'
         ? <Quiz id={this.state.user.id} entries={this.state.user.entries} onQuizFinish={this.onQuizFinish} onRouteChange={this.onRouteChange} />
+        : route === 'singleUser'
+        ? <SingleUser onRouteChange={this.onRouteChange} num={this.state.singleUserId}/>
         : route === 'home'
           ? <div>
-              <Profile id={this.state.user.id} name={this.state.user.name} entries={this.state.user.entries} email={this.state.user.email}/>
+              <Profile id={this.state.user.id} name={this.state.user.name} entries={this.state.user.entries}/>
             </div>
           : (
             route === 'signin'

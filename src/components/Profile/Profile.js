@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Logo = ({id, name, entries, email}) => {
+const Logo = ({id, name, entries}) => {
     return (
         <>
         <div className= 'ma4 mt0 center'>
@@ -11,14 +11,11 @@ const Logo = ({id, name, entries, email}) => {
             </div>
         </div>
         <div className='white f3'>
-            <div className="black f2" style={{textTransform: 'uppercase'}}>{name}</div>
+            <div className="black f2 fw9" style={{textTransform: 'uppercase'}}>{name}</div>
             your current score is
         </div>
-        <div className='white f1'>
+        <div className='white f1 fw5'>
             {entries}
-        </div>
-        <div className='white f3'>
-            Your email is: {email}
         </div>
         </>
     );

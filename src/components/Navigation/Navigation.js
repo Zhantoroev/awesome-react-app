@@ -9,11 +9,20 @@ const Navigation = ({ onRouteChange, isSignedIn, route }) => {
                     <p onClick={() => onRouteChange('playQuiz')} className='f3 link din white pa3 mr2 pointer'>Play quiz</p>
                 </nav>
             )
-        } else{
+        }
+        else if (route === 'playQuiz' || route === 'singleUser'){
+            return (
+                <nav style ={{display: 'flex', justifyContent: 'flex-end'}}>
+                    <p onClick={() => onRouteChange('home')} className='f3 link din white pa3 mr2 pointer'>Home</p>
+                    <p onClick={() => onRouteChange('main')} className='f3 link din white pa3 mr2 pointer'>Main</p>
+                </nav>
+            )
+        }
+         else{
         return (
         <nav style ={{display: 'flex', justifyContent: 'flex-end'}}>
             <p onClick={() => onRouteChange('playQuiz')} className='f3 link din white pa3 mr2 pointer'>Play quiz</p>
-            <p onClick={() => onRouteChange('main')} className='f3 link din white pa3 mr2 pointer'>All</p>
+            <p onClick={() => onRouteChange('main')} className='f3 link din white pa3 mr2 pointer'>Main</p>
             <p onClick={() => onRouteChange('signout')} className='f3 link din white pa3 mr2 pointer'>Sign Out</p>
         </nav>
         );
