@@ -6,7 +6,7 @@ const Logo = ({id, name, entries}) => {
         <div className= 'ma4 mt0 center'>
             <div className="br2 shadow-2" options={{ max : 50 }} style={{ height: 250, width: 250, overflow:'hidden' }} >
                 <div className="br3  ba b--white-10">
-                    <img style={{paddingTop: '5px'}} alt="logo" src={`https://robohash.org/${id}?200x200`}/>
+                    <img style={{paddingTop: '5px'}} alt="logo" src={`https://robohash.org/${id}?set=set4`}/>
                 </div>
             </div>
         </div>
