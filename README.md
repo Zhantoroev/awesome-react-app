@@ -2,7 +2,7 @@
 * This is a quiz application with user authentification
 
 <img src="https://github.com/Zhantoroev/pern-peaceful-retreat/blob/main/public/img1.png" width="49%" /> <img src="https://github.com/Zhantoroev/pern-peaceful-retreat/blob/main/public/img2.png" width="49%" />
-<img src="https://github.com/Zhantoroev/pern-peaceful-retreat/blob/main/public/img1.png" width="49%" />
+<img src="https://github.com/Zhantoroev/pern-peaceful-retreat/blob/main/public/img3.png" width="49%" />
 
 ## API Description
 * To view all users data from database `/all`  HTTP Method: Get
@@ -30,4 +30,4 @@
 [Link](https://github.com/Zhantoroev/pern-peaceful-retreat-api) to Back-end code
 [Server](https://peaceful-retreat-54716.herokuapp.com/)
 [Live](https://zhantoroev.github.io/pern-peaceful-retreat/) on GitHub Pages
-[Live](https://robo-quizz.herokuapp.com/) on Heroku
+[Live](https://awesome-react-app.herokuapp.com/) on Heroku
