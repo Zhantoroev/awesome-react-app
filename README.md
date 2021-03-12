@@ -2,7 +2,7 @@
 * This is a quiz application with user authentification
 
 <img src="https://github.com/Zhantoroev/awesome-react-app/blob/main/public/img1.png" width="49%" /> <img src="https://github.com/Zhantoroev/awesome-react-app/blob/main/public/img2.png" width="49%" />
-<img src="https://github.com/Zhantoroev/awesome-react-app/blob/main/public/img3.png" width="100%" />
+<img src="https://github.com/Zhantoroev/awesome-react-app/blob/main/public/img3.gif" width="100%" />
 
 ## API Description
 * To view all users data from database `/all`  HTTP Method: Get
@@ -27,6 +27,6 @@
 2. Run `npm install`
 3. Run `npm start`
 
-[Link](https://github.com/Zhantoroev/awesome-api) to Back-end code
-[Server](https://peaceful-retreat-54716.herokuapp.com/)
+[Link](https://github.com/Zhantoroev/awesome-api) to Back-end code\
+[Server](https://peaceful-retreat-54716.herokuapp.com/)\
 [Live](https://awesome-react-app.herokuapp.com/) on Heroku
