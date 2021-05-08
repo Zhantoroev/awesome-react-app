@@ -8,7 +8,6 @@ const ApiDocs =() => {
         width="99%"
         height="99%"
         id="myId"
-        className="myClassname"
         display="initial"/>
     </div>
   )

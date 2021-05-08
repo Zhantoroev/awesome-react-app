@@ -2,7 +2,6 @@ import React, { Component}  from 'react';
 import CardList from './CardList';
 import SearchBox from './SearchBox';
 import ErrorBoundry from './ErrorBoundry';
-import './All.css';
 
 class All extends Component {
   constructor(props) {
