@@ -8,6 +8,7 @@ import Quiz from './components/Quiz/QuizMain';
 import SingleUser from './components/singleUser/SingleUser'
 import './App.css';
 import 'tachyons';
+import ApiDocs from './components/ApiDocs';
 
 const initialState = {
   input: '',
@@ -72,7 +73,7 @@ class App extends Component {
       <div className="App">
         <Navigation isSignedIn={isSignedIn} onRouteChange={this.onRouteChange} route={route}/>
         
-        {route === 'main'
+        {route === 'api' ? <ApiDocs /> : route === 'main'
         ? <All route={route} onRouteChange={this.onRouteChange} onSingleUser={this.onSingleUser}/> : route === 'playQuiz'
         ? <Quiz id={this.state.user.id} entries={this.state.user.entries} onQuizFinish={this.onQuizFinish} onRouteChange={this.onRouteChange} /> : route === 'singleUser'
         ? <SingleUser onRouteChange={this.onRouteChange} num={this.state.singleUserId}/> : route === 'home'

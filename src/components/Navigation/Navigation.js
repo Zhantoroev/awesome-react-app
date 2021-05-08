@@ -31,6 +31,7 @@ const Navigation = ({ onRouteChange, isSignedIn, route }) => {
     else {
         return (
             <nav style ={{display: 'flex', justifyContent: 'flex-end'}}>
+                <p onClick={() => onRouteChange('api')} className='f3 link din white pa3 mr2 pointer'>API</p>
                 <p onClick={() => onRouteChange('signin')} className='f3 link din white pa3 mr2 pointer'>Sign In</p>
                 <p onClick={() => onRouteChange('register')} className='f3 link din white pa3  mr2 pointer'>Register</p>
             </nav>
