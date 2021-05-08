@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Particles from 'react-particles-js';
 import Navigation from './components/Navigation/Navigation';
 import Signin from './components/Signin/Signin';
 import Register from './components/Register/Register';
@@ -9,6 +10,25 @@ import SingleUser from './components/singleUser/SingleUser'
 import './App.css';
 import 'tachyons';
 import ApiDocs from './components/ApiDocs';
+
+const particlesOptions = {
+  "particles": {
+    "number": {
+        "value": 50
+    },
+    "size": {
+        "value": 3
+    }
+},
+"interactivity": {
+    "events": {
+        "onhover": {
+            "enable": true,
+            "mode": "repulse"
+        }
+    }
+}
+}
 
 const initialState = {
   input: '',
@@ -71,6 +91,8 @@ class App extends Component {
     const {isSignedIn, route} = this.state;
     return (
       <div className="App">
+        <Particles className = 'particles'
+        params={particlesOptions}/>
         <Navigation isSignedIn={isSignedIn} onRouteChange={this.onRouteChange} route={route}/>
         
         {route === 'api' ? <ApiDocs /> : route === 'main'

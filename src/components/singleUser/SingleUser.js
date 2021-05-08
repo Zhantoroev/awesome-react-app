@@ -35,7 +35,7 @@ class SingleUser extends Component{
     } 
     else {
       return (
-        <article className="br3  ba b--black-50 mv4 w-100 w-50-m w-25-l mw6 shadow-5 center">
+        <article className="br3  ba b--white-30 mv4 w-100 w-50-m w-25-l mw6 shadow-5 center">
           <main className="pa4 black-80 white">
             <img alt="profile" src={`https://robohash.org/${this.state.user.id}?set=set4`} />
               <h1>{this.state.user.name}</h1>
