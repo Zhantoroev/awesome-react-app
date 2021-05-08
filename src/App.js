@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import Particles from 'react-particles-js';
 import Navigation from './components/Navigation/Navigation';
 import Signin from './components/Signin/Signin';
 import Register from './components/Register/Register';
@@ -9,26 +8,6 @@ import Quiz from './components/Quiz/QuizMain';
 import SingleUser from './components/singleUser/SingleUser'
 import './App.css';
 import 'tachyons';
-
-
-const particlesOptions = {
-  "particles": {
-    "number": {
-        "value": 50
-    },
-    "size": {
-        "value": 3
-    }
-},
-"interactivity": {
-    "events": {
-        "onhover": {
-            "enable": true,
-            "mode": "repulse"
-        }
-    }
-}
-}
 
 const initialState = {
   input: '',
@@ -91,17 +70,12 @@ class App extends Component {
     const {isSignedIn, route} = this.state;
     return (
       <div className="App">
-        <Particles className = 'particles'
-        params={particlesOptions}/>
         <Navigation isSignedIn={isSignedIn} onRouteChange={this.onRouteChange} route={route}/>
         
         {route === 'main'
-        ? <All route={route} onRouteChange={this.onRouteChange} onSingleUser={this.onSingleUser}/>
-        : route === 'playQuiz'
-        ? <Quiz id={this.state.user.id} entries={this.state.user.entries} onQuizFinish={this.onQuizFinish} onRouteChange={this.onRouteChange} />
-        : route === 'singleUser'
-        ? <SingleUser onRouteChange={this.onRouteChange} num={this.state.singleUserId}/>
-        : route === 'home'
+        ? <All route={route} onRouteChange={this.onRouteChange} onSingleUser={this.onSingleUser}/> : route === 'playQuiz'
+        ? <Quiz id={this.state.user.id} entries={this.state.user.entries} onQuizFinish={this.onQuizFinish} onRouteChange={this.onRouteChange} /> : route === 'singleUser'
+        ? <SingleUser onRouteChange={this.onRouteChange} num={this.state.singleUserId}/> : route === 'home'
           ? <div>
               <Profile id={this.state.user.id} name={this.state.user.name} entries={this.state.user.entries}/>
             </div>
