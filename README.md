@@ -1,8 +1,9 @@
 # PERN project for CS 204
 * This is a quiz application with user authentification
 
-<img src="https://github.com/Zhantoroev/awesome-react-app/blob/main/public/img1.png" width="49%" /> <img src="https://github.com/Zhantoroev/awesome-react-app/blob/main/public/img2.png" width="49%" />
-<img src="https://github.com/Zhantoroev/awesome-react-app/blob/main/public/img3.png" width="33%" /> <img src="https://github.com/Zhantoroev/awesome-react-app/blob/main/public/img4.png" width="33%" /> <img src="https://github.com/Zhantoroev/awesome-react-app/blob/main/public/img4.png" width="33%" />
+<img src="https://github.com/Zhantoroev/awesome-react-app/blob/main/public/img1.png" width="50%" /><img src="https://github.com/Zhantoroev/awesome-react-app/blob/main/public/img2.png" width="50%" />
+<img src="https://github.com/Zhantoroev/awesome-react-app/blob/main/public/img3.png" width="50%" /><img src="https://github.com/Zhantoroev/awesome-react-app/blob/main/public/img5.png" width="50%" /> 
+<img src="https://github.com/Zhantoroev/awesome-react-app/blob/main/public/img5.png" width="50%" /><img src="https://github.com/Zhantoroev/awesome-react-app/blob/main/public/img6.png" width="50%" />
 <img src="https://github.com/Zhantoroev/awesome-react-app/blob/main/public/img3.gif" width="100%" />
 
 
