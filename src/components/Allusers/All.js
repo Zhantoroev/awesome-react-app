@@ -14,7 +14,7 @@ class All extends Component {
   }
 
   componentDidMount() {
-    fetch('https://peaceful-retreat-54716.herokuapp.com/all')
+    fetch(`${process.env.REACT_APP_BACKEND_URL}/all`)
     .then(response => response.json())
     .then(users => this.setState({robots: users}));
   }

@@ -15,7 +15,7 @@ class SingleUser extends Component{
   };
 
   componentDidMount = () => {
-    fetch(`https://peaceful-retreat-54716.herokuapp.com/all/${this.props.num}`)
+    fetch(`${process.env.REACT_APP_BACKEND_URL}/all/${this.props.num}`)
       .then(response => response.json())
       .then(user => {
         this.setState({user: {

@@ -120,7 +120,7 @@ export default class Quiz extends Component {
     }
 
     finished = () => {
-        fetch('https://peaceful-retreat-54716.herokuapp.com/score', {
+        fetch(`${process.env.REACT_APP_BACKEND_URL}/score`, {
                 method: 'put',
                 headers: {'Content-Type': 'application/json'},
                 body: JSON.stringify({
