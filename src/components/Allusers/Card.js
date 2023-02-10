@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Card = ({name, entries, id, onRouteChange, onSingleUser}) => {
+const Card = ({name, score, id, onRouteChange, onSingleUser}) => {
   const run =() => {
     onRouteChange('singleUser');
     onSingleUser(id)
@@ -10,7 +10,7 @@ const Card = ({name, entries, id, onRouteChange, onSingleUser}) => {
           <img alt='robots' src={`https://robohash.org/${id}?set=set4`}/>
           <div>
             <h2 className='fw6'>{name}</h2>
-            <h3>score: {entries}</h3>
+            <h3>score: {score}</h3>
           </div>
         </div>
   )

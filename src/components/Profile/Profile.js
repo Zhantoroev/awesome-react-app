@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Logo = ({id, name, entries}) => {
+const Logo = ({id, name, score}) => {
     return (
         <>
         <div className= 'ma4 mt0 center'>
@@ -15,7 +15,7 @@ const Logo = ({id, name, entries}) => {
             your current score is
         </div>
         <div className='white f1 fw5'>
-            {entries}
+            {score}
         </div>
         </>
     );

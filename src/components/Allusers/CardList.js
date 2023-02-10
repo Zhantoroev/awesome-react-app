@@ -7,7 +7,7 @@ const CardList = ({robots, data, onRouteChange, onSingleUser}) => {
       return (<Card 
         key={i} 
         name={robots[i].name} 
-        entries={robots[i].entries} 
+        score={robots[i].score} 
         id={robots[i].id} 
         onRouteChange={onRouteChange}
         onSingleUser={onSingleUser}

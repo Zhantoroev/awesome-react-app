@@ -8,21 +8,21 @@ class SingleUser extends Component{
         id: '',
         name: '',
         email: '',
-        entries: 0,
+        score: 0,
         joined: '',
       }
     }
   };
 
   componentDidMount = () => {
-    fetch(`${process.env.REACT_APP_BACKEND_URL}/all/${this.props.num}`)
+    fetch(`${process.env.REACT_APP_BACKEND_URL}/api/all/${this.props.num}`)
       .then(response => response.json())
       .then(user => {
         this.setState({user: {
           id: user.id,
           name: user.name,
           email: user.email,
-          entries: user.entries,
+          score: user.score,
           joined: user.joined
         }})
       })
@@ -40,7 +40,7 @@ class SingleUser extends Component{
             <img alt="profile" src={`https://robohash.org/${this.state.user.id}?set=set4`} />
               <h1>{this.state.user.name}</h1>
               email: <h2>{this.state.user.email}</h2>
-              score: <h1>{this.state.user.entries}</h1>
+              score: <h1>{this.state.user.score}</h1>
               joined: <p>{this.state.user.joined}</p>
             </main>
         </article>

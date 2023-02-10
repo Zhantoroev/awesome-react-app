@@ -41,7 +41,7 @@ const initialState = {
     name: '',
     email: '',
     password: '',
-    entries: 0,
+    score: 0,
     joined: ''
   }
 }
@@ -57,7 +57,7 @@ class App extends Component {
       id: data.id,
       name: data.name,
       email: data.email,
-      entries: data.entries,
+      score: data.score,
       joined: data.joined
     }})
   }
@@ -81,7 +81,7 @@ class App extends Component {
   }
 
   onQuizFinish = (score) => {
-    this.setState(Object.assign(this.state.user, { entries: score}))
+    this.setState(Object.assign(this.state.user, { score: score}))
   }
   onSingleUser = (num) => {
     this.setState({singleUserId: num})
@@ -97,10 +97,10 @@ class App extends Component {
         
         {route === 'api' ? <ApiDocs /> : route === 'main'
         ? <All route={route} onRouteChange={this.onRouteChange} onSingleUser={this.onSingleUser}/> : route === 'playQuiz'
-        ? <Quiz id={this.state.user.id} entries={this.state.user.entries} onQuizFinish={this.onQuizFinish} onRouteChange={this.onRouteChange} /> : route === 'singleUser'
+        ? <Quiz id={this.state.user.id} score={this.state.user.score} onQuizFinish={this.onQuizFinish} onRouteChange={this.onRouteChange} /> : route === 'singleUser'
         ? <SingleUser onRouteChange={this.onRouteChange} num={this.state.singleUserId}/> : route === 'home'
           ? <div>
-              <Profile id={this.state.user.id} name={this.state.user.name} entries={this.state.user.entries}/>
+              <Profile id={this.state.user.id} name={this.state.user.name} score={this.state.user.score}/>
             </div>
           : (
             route === 'signin'
