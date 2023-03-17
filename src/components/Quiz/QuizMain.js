@@ -120,7 +120,7 @@ export default class Quiz extends Component {
     }
 
     finished = () => {
-        fetch(`${process.env.REACT_APP_BACKEND_URL}/api/score`, {
+        fetch('/api/score', {
                 method: 'put',
                 headers: {'Content-Type': 'application/json'},
                 body: JSON.stringify({

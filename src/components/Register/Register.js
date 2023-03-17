@@ -26,7 +26,7 @@ class Register extends React.Component {
         if(!this.state.name || !this.state.email || !this.state.password){
             return alert("please, fill out all fields")
         }
-        fetch(`${process.env.REACT_APP_BACKEND_URL}/api/register`, {
+        fetch('/api/register', {
             method: 'post',
             headers: {"Content-Type": "application/json"},
             body : JSON.stringify({

@@ -1,10 +1,10 @@
 # PERN project for CS 204
 * This is a quiz application with user authentification
 
-<img src="https://github.com/Zhantoroev/awesome-react-app/blob/main/public/img1.png" width="50%" /><img src="https://github.com/Zhantoroev/awesome-react-app/blob/main/public/img2.png" width="50%" />
-<img src="https://github.com/Zhantoroev/awesome-react-app/blob/main/public/img3.png" width="50%" /><img src="https://github.com/Zhantoroev/awesome-react-app/blob/main/public/img5.png" width="50%" /> 
-<img src="https://github.com/Zhantoroev/awesome-react-app/blob/main/public/img6.png" width="50%" /><img src="https://github.com/Zhantoroev/awesome-react-app/blob/main/public/img4.png" width="50%" />
-<img src="https://github.com/Zhantoroev/awesome-react-app/blob/main/public/img3.gif" width="100%" />
+<img src="./public/img1.png" width="50%" /><img src="./public/img2.png" width="50%" />
+<img src="./public/img3.png" width="50%" /><img src="./public/img5.png" width="50%" /> 
+<img src="./public/img6.png" width="50%" /><img src="./public/img4.png" width="50%" />
+<img src="./public/img3.gif" width="100%" />
 
 
 ## [API Documentation](https://peaceful-retreat-54716.herokuapp.com/api-docs/)
@@ -37,8 +37,34 @@
 | ---      | ---              | ---                                                          |
 | 1        | syimyk@gmail.com | $2a$05$LhayLxezLhK1LhWvKxCyLOj0j1u.Kj0jZ0pEmm134uzrQlFvQJLF6 |
 
-[Back-end](https://github.com/Zhantoroev/awesome-api)
 
-[Server](https://peaceful-retreat-54716.herokuapp.com/)
 
-[Live](https://awesome-react-app.herokuapp.com/) on Heroku
+## Instructions to build to Docker image 
+1. Clone repo
+```
+git clone https://github.com/beknazar001/frontend-awesome-cats.git
+cd frontend-awesome-cats
+```
+2. Build a docker image with the tag name 'frontend'
+```
+docker build -t frontend .
+```
+3. Create a new repo in Docker Hub and Login to docker from CLI
+```
+docker login
+```
+4. Change docker image tag
+```bash
+docker tag frontend <docker-username>/<repo-name>
+# If you'd like to add tag you can run
+docker tag frontend <docker-username>/<repo-name>:tagname
+```
+4. Push your image to Docker Hub
+```
+docker push <docker-username>/<repo-name>:
+```
+
+After completing all of those steps above you would have a built docker image that you can use further as the usual docker image<br>
+<br>
+
+<h2 style=color:orange> "The only way to do great work is to love what you do."</h2><h3> - Steve Jobs </h3>

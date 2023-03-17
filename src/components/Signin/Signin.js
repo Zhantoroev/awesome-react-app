@@ -21,7 +21,7 @@ class Signin extends React.Component {
     if(!this.state.signInEmain || !this.state.signInPassword) {
       return alert('please, fill all fields')
     }
-    fetch(`${process.env.REACT_APP_BACKEND_URL}/api/signin`, {
+    fetch('/api/signin', {
       method: 'post',
       headers: {'Content-Type': 'application/json'},
       body: JSON.stringify({

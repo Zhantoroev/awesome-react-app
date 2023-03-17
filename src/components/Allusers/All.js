@@ -14,7 +14,7 @@ class All extends Component {
   }
 
   componentDidMount() {
-    fetch(`${process.env.REACT_APP_BACKEND_URL}/api/all`)
+    fetch('/api/all')
     .then(response => response.json())
     .then(users => this.setState({robots: users}));
   }

@@ -15,7 +15,7 @@ class SingleUser extends Component{
   };
 
   componentDidMount = () => {
-    fetch(`${process.env.REACT_APP_BACKEND_URL}/api/all/${this.props.num}`)
+    fetch('/api/all/${this.props.num}')
       .then(response => response.json())
       .then(user => {
         this.setState({user: {
